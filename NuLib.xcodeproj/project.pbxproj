@@ -15,6 +15,8 @@
 		5CF2163823918C1200F7C092 /* Json.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF2163623918C1200F7C092 /* Json.hpp */; };
 		5CF2163B23918D6200F7C092 /* JsonPrivate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2163923918D6200F7C092 /* JsonPrivate.cpp */; };
 		5CF2163C23918D6200F7C092 /* JsonPrivate.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF2163A23918D6200F7C092 /* JsonPrivate.hpp */; };
+		5CF2163F2392A65500F7C092 /* JsonExeption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2163D2392A65500F7C092 /* JsonExeption.cpp */; };
+		5CF216402392A65500F7C092 /* JsonExeption.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF2163E2392A65500F7C092 /* JsonExeption.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		5CF2163623918C1200F7C092 /* Json.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Json.hpp; path = include/Json.hpp; sourceTree = SOURCE_ROOT; };
 		5CF2163923918D6200F7C092 /* JsonPrivate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = JsonPrivate.cpp; sourceTree = SOURCE_ROOT; };
 		5CF2163A23918D6200F7C092 /* JsonPrivate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = JsonPrivate.hpp; sourceTree = SOURCE_ROOT; };
+		5CF2163D2392A65500F7C092 /* JsonExeption.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = JsonExeption.cpp; path = include/JsonExeption.cpp; sourceTree = SOURCE_ROOT; };
+		5CF2163E2392A65500F7C092 /* JsonExeption.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = JsonExeption.hpp; path = include/JsonExeption.hpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				5C2B35B423900A2F00DBADEB /* NuVector.hpp */,
 				5CF2163223918B1000F7C092 /* Jsonable.hpp */,
 				5CF2163623918C1200F7C092 /* Json.hpp */,
+				5CF2163D2392A65500F7C092 /* JsonExeption.cpp */,
+				5CF2163E2392A65500F7C092 /* JsonExeption.hpp */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -79,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CF2163823918C1200F7C092 /* Json.hpp in Headers */,
+				5CF216402392A65500F7C092 /* JsonExeption.hpp in Headers */,
 				5C2B35B523900A2F00DBADEB /* NuVector.hpp in Headers */,
 				5CF2163C23918D6200F7C092 /* JsonPrivate.hpp in Headers */,
 				5CF2163423918B1000F7C092 /* Jsonable.hpp in Headers */,
@@ -143,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C2B35B22390039B00DBADEB /* NuVector.hxx in Sources */,
+				5CF2163F2392A65500F7C092 /* JsonExeption.cpp in Sources */,
 				5CF2163323918B1000F7C092 /* Jsonable.cpp in Sources */,
 				5CF2163B23918D6200F7C092 /* JsonPrivate.cpp in Sources */,
 				5CF2163723918C1200F7C092 /* Json.cpp in Sources */,

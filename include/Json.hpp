@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Jsonable.hpp"
+#include "JsonExeption.hpp"
 #include <variant>
 
 namespace nu {
@@ -27,7 +28,7 @@ private:
     if (assign_type<float>(elem, to)) return;
     if (assign_type<string>(elem, to)) return;
     if (assign_type<Json>(elem, to)) return;
-    throw "unknown type\n";
+    throw TypeError();
   }
   std::map<string, JsonTypes> m_map;
   string m_jsn;
@@ -48,7 +49,7 @@ public:
 template <typename Jsnable>
 Jsonable& Json::to(Jsnable& obj) {
   if constexpr (!std::is_base_of_v<Jsonable, Jsnable>) {
-    throw "invalide type.\n";
+    throw JsonError("type destination is not Jsonable");
   }
   auto& jsnObj = dynamic_cast<Jsonable&>(obj);
   if (m_map.size() == 0) parse(m_jsn);

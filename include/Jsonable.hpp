@@ -1,5 +1,6 @@
 #pragma once
 
+#include "JsonExeption.hpp"
 #include <map>
 #include <string>
 
@@ -27,8 +28,9 @@ public:
 
 };
 
-#define JsnVar(type, var) m_jsnObj[#var] = &var;\
-val_to_string[#var] = [&](void) { return to_string<type>(var); }
+/*#define JsnVar(type, var) m_jsnObj[#var] = &var;\
+val_to_string[#var] = [&](void) { return to_string<type>(var); }*/
+#define JsnVar(type, var) _set_up_<type>(#type, #var, var);
 
 class Jsonable {
 private:
@@ -48,6 +50,21 @@ protected:
       return std::to_string((float)val);
     }
     throw val;
+  }
+
+  template <typename T>
+  void _set_up_(string type, string var_name, T& var) {
+    if constexpr (std::is_pointer_v<T>) {
+      throw TypeError("pointer");
+    } else if constexpr (!(std::is_same_v<T, int>
+                           || std::is_same_v<T, float>
+                           || std::is_same_v<T, string>
+                           || std::is_same_v<T, bool>
+                           || std::is_base_of_v<Jsonable, T>)) {
+      throw TypeError(type);
+    }
+    m_jsnObj[var_name] = &var;
+    val_to_string[var_name] = [&](void) { return to_string<T>(var);};
   }
 public:
   Jsonable() = default;
