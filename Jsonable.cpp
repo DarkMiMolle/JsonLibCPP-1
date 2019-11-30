@@ -17,16 +17,18 @@ void*& MapJson::operator[](string key) {
   return m_map.at(key);
 }
 
+std::string Jsonable::stringify() const {
+  std::string jsn = "{\n";
+  for (auto& elem : val_to_string) {
+    jsn += elem.first + ": ";
+    jsn += elem.second() + ",\n";
+  }
+  jsn = jsn.substr(0, jsn.size() - 2) + "\n}";
+  return jsn;
+}
+
 }
 
 /*
- std::string Jsonable::stringify() const {
- std::string jsn = "{\n";
- for (auto& elem : val_to_string) {
- jsn += elem.first + ",\n";
- jsn += elem.second() + ",\n";
- }
- jsn = jsn.substr(0, jsn.size() - 3) + "\n}";
- return jsn;
- }
+
  */

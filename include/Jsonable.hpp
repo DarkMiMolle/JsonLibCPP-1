@@ -5,8 +5,9 @@
 
 namespace nu {
 
+using string = std::string;
+
 class MapJson {
-  using string = std::string;
 private:
   std::map<string, void*> m_map;
 public:
@@ -26,46 +27,36 @@ public:
 
 };
 
-#define JsnVar(var) m_jsnObj[#var] = &var
+#define JsnVar(type, var) m_jsnObj[#var] = &var;\
+val_to_string[#var] = [&](void) { return to_string<type>(var); }
 
 class Jsonable {
 private:
   friend class Json;
 protected:
-  MapJson m_jsnObj;
+  nu::MapJson m_jsnObj;
+  std::map<std::string, std::function<std::string(void)>> val_to_string;
+  template <typename T>
+  std::string to_string(T& val) {
+    if constexpr (std::is_base_of_v<Jsonable, T>) {
+      return val.stringify();
+    }
+    if constexpr (std::is_same_v<T, std::string>) {
+      return val;
+    }
+    if constexpr (std::is_arithmetic_v<T>) {
+      return std::to_string((float)val);
+    }
+    throw val;
+  }
 public:
   Jsonable() = default;
 
+  std::string stringify() const;
 };
 
 }
 
 /*
- #define JsnVar(type, var) m_jsnObj[#var] = &var;\
- val_to_string[#var] = [&](void) { return to_string<type>(var); }
 
- class Jsonable {
- private:
- friend class Json;
- protected:
- nu::MapJson m_jsnObj;
- std::map<std::string, std::function<std::string(void)>> val_to_string;
- template <typename T>
- std::string to_string(T& val) {
- if constexpr (std::is_base_of_v<Jsonable, T>) {
- return val.stringify();
- }
- if constexpr (std::is_same_v<T, std::string>) {
- return val;
- }
- if constexpr (std::is_arithmetic_v<T>) {
- return std::to_string((float)val);
- }
- throw val;
- }
- public:
- Jsonable() = default;
-
- std::string stringify() const;
- };
  */
