@@ -29,7 +29,7 @@ protected:
       return string(1, val);
     }
     if constexpr (std::is_arithmetic_v<T>) {
-      return std::to_string((float)val);
+      return std::to_string(val);
     }
     throw val;
   }

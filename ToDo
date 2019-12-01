@@ -1,0 +1,9 @@
+ToDo:
+
+* handle arrays
+* handle null (null != nullptr), there is no ptr in Json
+null will only be 0 set to all JsonBasicTypes
+* add throw TypeError in assign_gen function when the type is not compatible
+* create a template function which may throw TypeError for Json with only a JsonBasicType value.
+
+* put the templated function into a .hxx
