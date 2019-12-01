@@ -2,8 +2,9 @@
 
 #include <vector>
 #include <functional>
+#include <type_traits>
 
-#define then
+
 
 namespace nu {
 
@@ -39,7 +40,7 @@ template <typename T>
 Vector<T> Vector<T>::filter_ref(std::function<bool(T&)> selector) {
   Vector<T> filtered;
   for (auto& elem : *this) {
-    if (selector(elem)) then filtered.push_back(elem);
+    if (selector(elem)) filtered.push_back(elem);
   }
   return filtered;
 }
@@ -64,3 +65,12 @@ Vector<T>& Vector<T>::operator+ (std::vector<T>& concat) {
 
 }
 
+/*namespace std {
+
+template <typename T>
+struct is_array<nu::Vector<T>> : true_type {};
+
+template <typename T>
+struct is_array<vector<T>> : true_type {};
+
+}*/

@@ -8,29 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		5C2B35B22390039B00DBADEB /* NuVector.hxx in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B35B02390039B00DBADEB /* NuVector.hxx */; };
-		5C2B35B523900A2F00DBADEB /* NuVector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5C2B35B423900A2F00DBADEB /* NuVector.hpp */; };
 		5CF2163323918B1000F7C092 /* Jsonable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2163123918B1000F7C092 /* Jsonable.cpp */; };
-		5CF2163423918B1000F7C092 /* Jsonable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF2163223918B1000F7C092 /* Jsonable.hpp */; };
 		5CF2163723918C1200F7C092 /* Json.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2163523918C1200F7C092 /* Json.cpp */; };
-		5CF2163823918C1200F7C092 /* Json.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF2163623918C1200F7C092 /* Json.hpp */; };
-		5CF2163B23918D6200F7C092 /* JsonPrivate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2163923918D6200F7C092 /* JsonPrivate.cpp */; };
-		5CF2163C23918D6200F7C092 /* JsonPrivate.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF2163A23918D6200F7C092 /* JsonPrivate.hpp */; };
-		5CF2163F2392A65500F7C092 /* JsonExeption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2163D2392A65500F7C092 /* JsonExeption.cpp */; };
-		5CF216402392A65500F7C092 /* JsonExeption.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF2163E2392A65500F7C092 /* JsonExeption.hpp */; };
+		5CF216442394283200F7C092 /* JsonExeption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF216432394283200F7C092 /* JsonExeption.cpp */; };
+		5CF2164E239428A200F7C092 /* Json.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF21648239428A200F7C092 /* Json.hpp */; };
+		5CF2164F239428A200F7C092 /* JsonExeption.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF21649239428A200F7C092 /* JsonExeption.hpp */; };
+		5CF21650239428A200F7C092 /* NuVector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF2164A239428A200F7C092 /* NuVector.hpp */; };
+		5CF21651239428A200F7C092 /* Json.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF2164C239428A200F7C092 /* Json.hpp */; };
+		5CF21652239428A200F7C092 /* Jsonable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF2164D239428A200F7C092 /* Jsonable.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C2B359E238FF84900DBADEB /* libNuLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNuLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2B35B02390039B00DBADEB /* NuVector.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NuVector.hxx; sourceTree = "<group>"; };
-		5C2B35B423900A2F00DBADEB /* NuVector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = NuVector.hpp; path = include/NuVector.hpp; sourceTree = SOURCE_ROOT; };
 		5CF2163123918B1000F7C092 /* Jsonable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Jsonable.cpp; sourceTree = SOURCE_ROOT; };
-		5CF2163223918B1000F7C092 /* Jsonable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Jsonable.hpp; path = include/Jsonable.hpp; sourceTree = SOURCE_ROOT; };
 		5CF2163523918C1200F7C092 /* Json.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Json.cpp; sourceTree = SOURCE_ROOT; };
-		5CF2163623918C1200F7C092 /* Json.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Json.hpp; path = include/Json.hpp; sourceTree = SOURCE_ROOT; };
-		5CF2163923918D6200F7C092 /* JsonPrivate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = JsonPrivate.cpp; sourceTree = SOURCE_ROOT; };
-		5CF2163A23918D6200F7C092 /* JsonPrivate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = JsonPrivate.hpp; sourceTree = SOURCE_ROOT; };
-		5CF2163D2392A65500F7C092 /* JsonExeption.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = JsonExeption.cpp; path = include/JsonExeption.cpp; sourceTree = SOURCE_ROOT; };
-		5CF2163E2392A65500F7C092 /* JsonExeption.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = JsonExeption.hpp; path = include/JsonExeption.hpp; sourceTree = SOURCE_ROOT; };
+		5CF216432394283200F7C092 /* JsonExeption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JsonExeption.cpp; sourceTree = "<group>"; };
+		5CF21648239428A200F7C092 /* Json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Json.hpp; sourceTree = "<group>"; };
+		5CF21649239428A200F7C092 /* JsonExeption.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = JsonExeption.hpp; sourceTree = "<group>"; };
+		5CF2164A239428A200F7C092 /* NuVector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NuVector.hpp; sourceTree = "<group>"; };
+		5CF2164C239428A200F7C092 /* Json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Json.hpp; sourceTree = "<group>"; };
+		5CF2164D239428A200F7C092 /* Jsonable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Jsonable.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,12 +45,11 @@
 		5C2B3595238FF84900DBADEB = {
 			isa = PBXGroup;
 			children = (
-				5C2B35AC238FFF3D00DBADEB /* lib */,
+				5CF21647239428A200F7C092 /* include */,
+				5CF216432394283200F7C092 /* JsonExeption.cpp */,
 				5C2B35B02390039B00DBADEB /* NuVector.hxx */,
-				5CF2163923918D6200F7C092 /* JsonPrivate.cpp */,
 				5CF2163523918C1200F7C092 /* Json.cpp */,
 				5CF2163123918B1000F7C092 /* Jsonable.cpp */,
-				5CF2163A23918D6200F7C092 /* JsonPrivate.hpp */,
 				5C2B359F238FF84900DBADEB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,16 +62,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5C2B35AC238FFF3D00DBADEB /* lib */ = {
+		5CF21647239428A200F7C092 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				5C2B35B423900A2F00DBADEB /* NuVector.hpp */,
-				5CF2163223918B1000F7C092 /* Jsonable.hpp */,
-				5CF2163623918C1200F7C092 /* Json.hpp */,
-				5CF2163D2392A65500F7C092 /* JsonExeption.cpp */,
-				5CF2163E2392A65500F7C092 /* JsonExeption.hpp */,
+				5CF21648239428A200F7C092 /* Json.hpp */,
+				5CF21649239428A200F7C092 /* JsonExeption.hpp */,
+				5CF2164A239428A200F7C092 /* NuVector.hpp */,
+				5CF2164B239428A200F7C092 /* json_files */,
 			);
-			path = lib;
+			path = include;
+			sourceTree = "<group>";
+		};
+		5CF2164B239428A200F7C092 /* json_files */ = {
+			isa = PBXGroup;
+			children = (
+				5CF2164C239428A200F7C092 /* Json.hpp */,
+				5CF2164D239428A200F7C092 /* Jsonable.hpp */,
+			);
+			path = json_files;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,11 +89,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CF2163823918C1200F7C092 /* Json.hpp in Headers */,
-				5CF216402392A65500F7C092 /* JsonExeption.hpp in Headers */,
-				5C2B35B523900A2F00DBADEB /* NuVector.hpp in Headers */,
-				5CF2163C23918D6200F7C092 /* JsonPrivate.hpp in Headers */,
-				5CF2163423918B1000F7C092 /* Jsonable.hpp in Headers */,
+				5CF21650239428A200F7C092 /* NuVector.hpp in Headers */,
+				5CF2164E239428A200F7C092 /* Json.hpp in Headers */,
+				5CF21652239428A200F7C092 /* Jsonable.hpp in Headers */,
+				5CF2164F239428A200F7C092 /* JsonExeption.hpp in Headers */,
+				5CF21651239428A200F7C092 /* Json.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +155,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C2B35B22390039B00DBADEB /* NuVector.hxx in Sources */,
-				5CF2163F2392A65500F7C092 /* JsonExeption.cpp in Sources */,
+				5CF216442394283200F7C092 /* JsonExeption.cpp in Sources */,
 				5CF2163323918B1000F7C092 /* Jsonable.cpp in Sources */,
-				5CF2163B23918D6200F7C092 /* JsonPrivate.cpp in Sources */,
 				5CF2163723918C1200F7C092 /* Json.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
