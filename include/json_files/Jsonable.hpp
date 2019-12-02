@@ -46,6 +46,10 @@ protected:
   std::function<void(JsonTypes)> assign_gen(T* val) {
     if constexpr (std::is_base_of_v<Jsonable, T>) { // val is an Object.
       return [=](JsonTypes elem) {
+        if (assign_if_JsonNull(val, elem)) {
+          return;
+        }
+
         try {
           val->load(std::get<Json>(elem));
         } catch (std::exception& e) {
@@ -58,11 +62,19 @@ protected:
     }
     if constexpr(std::is_same_v<T, char>) {
       return [=](JsonTypes elem) {
+        if (assign_if_JsonNull(val, elem)) {
+          return;
+        }
+
         *val = std::get<char>(elem);
       };
     }
     if constexpr (is_JsonTypes<T>) {
       return [=](JsonTypes elem) {
+        if (assign_if_JsonNull(val, elem)) {
+          return;
+        }
+        
         try {
           *val = std::get<T>(elem);
         } catch (std::exception& e) {

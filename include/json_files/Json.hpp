@@ -14,9 +14,12 @@ using string = std::string;
 
 class Json;
 
-#define JsonBasicTypes bool, float, int, std::string, char
+using JsonNull = void*;
 using JsonObj = Json;
-using JsonArray = std::variant<nu::Vector<int>, nu::Vector<std::string>, nu::Vector<float>, nu::Vector<bool>, nu::Vector<JsonObj>>;
+template <typename T>
+using JArray = nu::Vector<T>;
+using JsonArray = std::variant<JArray<int>, JArray<string>, JArray<float>, JArray<bool>, JArray<JsonObj>, JArray<JsonNull>>;
+#define JsonBasicTypes bool, float, int, std::string, char, JsonNull
 using JsonTypes = std::variant<JsonBasicTypes, JsonObj, JsonArray>;
 #undef JsonBasicTypes
 
@@ -38,5 +41,17 @@ public:
 };
 
 
+inline bool is_JsonNull(JsonTypes& j) {
+  return std::get_if<JsonNull>(&j) != nullptr;
+}
+
+template <typename T>
+inline bool assign_if_JsonNull(T* val, JsonTypes& j) {
+  if (is_JsonNull(j)) {
+    *val = T();
+    return true;
+  }
+  return false;
+}
 
 }

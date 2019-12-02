@@ -40,7 +40,6 @@ nu::Vector<string> cut_var(string str) {
       array.back() += c;
     }
     if (close) {
-      // std::cout << "cut_var: " << array.back() << '\n';
       array.push_back(string());
       close = false;
     }
@@ -54,7 +53,6 @@ constexpr bool isVar(char c) {
 }
 
 nu::JsonTypes to_type(string str) {
-  // std::cout << "to_type: " << str << '\n';
   if (str.front() == '"' && str.back() == '"') {
     auto val = str.substr(1, str.size() - 2);
     if (val.size() == 1) {
@@ -68,6 +66,8 @@ nu::JsonTypes to_type(string str) {
     return std::stoi(str);
   } else if (str == "true" || str == "false") {
     return str == "true";
+  } else if (str == "null") {
+    return nullptr;
   } else if (str.front() == '{' && str.back() == '}') {
     return nu::Json().parse(str);
   }
@@ -80,7 +80,7 @@ std::pair<string, nu::JsonTypes> parse_var(string str) {
   size_t i = 0;
   for (; str[i] != '"'; ++i) varName += str[i];
   for (; str[i] != ':' && str[i]; ++i);
-  for (; !isVar(str[i]) && str[i]; ++i);
+  for (; !isVar(str[i]) && str[i] && str.substr(i, 4) != "null"; ++i);
   return std::pair(varName, to_type(str.substr(i)));
 }
 
