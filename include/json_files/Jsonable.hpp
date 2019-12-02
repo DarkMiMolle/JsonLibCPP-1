@@ -5,6 +5,8 @@
 #include <map>
 #include <string>
 
+#include <iostream>
+
 namespace nu {
 
 using string = std::string;
@@ -12,6 +14,12 @@ using string = std::string;
 
 #define JsnVar(type, var) set[#var] = assign_gen<type>(&var);\
 val_to_string[#var] = [&](void) { return to_string<type>(var); }
+
+template <typename T>
+constexpr bool is_JsonTypes = std::is_same_v<int, T>
+|| std::is_same_v<float, T> || std::is_same_v<char, T>
+|| std::is_same_v<string, T> || std::is_same_v<bool, T>;
+
 
 class Jsonable {
 protected:
@@ -26,7 +34,7 @@ protected:
       return "\"" + val + "\"";
     }
     if constexpr (std::is_same_v<T, char>) {
-      return string(1, val);
+      return string() + "\"" + val + "\"";
     }
     if constexpr (std::is_arithmetic_v<T>) {
       return std::to_string(val);
@@ -38,7 +46,11 @@ protected:
   std::function<void(JsonTypes)> assign_gen(T* val) {
     if constexpr (std::is_base_of_v<Jsonable, T>) { // val is an Object.
       return [=](JsonTypes elem) {
-        val->load(std::get<Json>(elem));
+        try {
+          val->load(std::get<Json>(elem));
+        } catch (std::exception& e) {
+          std::cout << e.what() << "\n\n";
+        }
       };
     }
     if constexpr (std::is_array_v<T>) {
@@ -49,8 +61,18 @@ protected:
         *val = std::get<char>(elem);
       };
     }
-    return [=](JsonTypes elem) {
-      *val = std::get<T>(elem);
+    if constexpr (is_JsonTypes<T>) {
+      return [=](JsonTypes elem) {
+        try {
+          *val = std::get<T>(elem);
+        } catch (std::exception& e) {
+          std::cout << std::boolalpha << std::is_base_of_v<Jsonable, T> << '\n' <<
+          e.what() << '\n';
+        }
+      };
+    }
+    return [](JsonTypes elem) {
+      throw "error";
     };
   }
 

@@ -9,6 +9,7 @@ using namespace std;
 
 /*--------------- PRIVATE FUNC ------------------*/
 
+
 nu::Vector<string> cut_var(string str) {
   nu::Vector<string> array;
   array.push_back("");
@@ -22,7 +23,14 @@ nu::Vector<string> cut_var(string str) {
   }
   auto open = 0;
   auto close = false;
+  auto obj = 0;
   for (auto& c : str) {
+    if (c == '{') ++obj;
+    if (c == '}') --obj;
+    if (obj > 0) {
+      array.back() += c;
+      continue;
+    }
     if (c == '"' && open % 2 == 0 && open) --open;
     else if (c == '"') ++open; // open = 0 || 1
     if (c == ',' && open == 2) {
@@ -32,6 +40,7 @@ nu::Vector<string> cut_var(string str) {
       array.back() += c;
     }
     if (close) {
+      // std::cout << "cut_var: " << array.back() << '\n';
       array.push_back(string());
       close = false;
     }
@@ -45,6 +54,7 @@ constexpr bool isVar(char c) {
 }
 
 nu::JsonTypes to_type(string str) {
+  // std::cout << "to_type: " << str << '\n';
   if (str.front() == '"' && str.back() == '"') {
     auto val = str.substr(1, str.size() - 2);
     if (val.size() == 1) {
