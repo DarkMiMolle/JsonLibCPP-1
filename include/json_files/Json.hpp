@@ -14,12 +14,17 @@ using string = std::string;
 
 class Json;
 
+
 using JsonNull = void*;
 using JsonObj = Json;
 template <typename T>
 using JArray = nu::Vector<T>;
-using JsonArray = std::variant<JArray<int>, JArray<string>, JArray<float>, JArray<bool>, JArray<JsonObj>, JArray<JsonNull>>;
+//using JsonArray = std::variant<JArray<int>, JArray<string>, JArray<float>, JArray<bool>, JArray<JsonObj>, JArray<JsonNull>>;
 #define JsonBasicTypes bool, float, int, std::string, char, JsonNull
+struct JsonArray {
+  nu::Vector<std::variant<JsonBasicTypes, Json, JsonArray>> list;
+};
+
 using JsonTypes = std::variant<JsonBasicTypes, JsonObj, JsonArray>;
 #undef JsonBasicTypes
 
@@ -31,6 +36,7 @@ private:
 public:
   Json() = default;
   Json(string str);
+  Json(char* str);
 
   Json& parse(string str);
 

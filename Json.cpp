@@ -137,7 +137,7 @@ string val(string& str) {
   } else if (str.front() == '[') {
      return val_array(str);
   }
-  throw "invalide value parsing";
+  throw nu::JsonError("invalide value parsing");
 }
 
 string var(string& str) {
@@ -185,7 +185,7 @@ nu::JsonTypes to_type(string str) {
       return val[0];
     }
     return val;
-  } else if (str.front() > '0' && str.back() <= '9') {
+  } else if (str.front() >= '0' && str.back() <= '9') {
     if (str.find('.') != string::npos) {
       return std::stof(str);
     }
@@ -196,6 +196,32 @@ nu::JsonTypes to_type(string str) {
     return nullptr;
   } else if (str.front() == '{' && str.back() == '}') {
     return nu::Json().parse(str);
+  } else if (str.front() == '[' && str.back() == ']') {
+    
+    nu::JsonArray array;
+    str = str.substr(1);
+    while (str.size()) {
+      for (size_t i = 0; i < str.size(); ++i) {
+        if (str[i] != ' ') {
+          str = str.substr(i);
+          break;
+        }
+      }
+      try {
+        array.list.push_back(to_type(val(str)));
+      } catch (std::exception& e) {
+        // TODO
+        throw e;
+      }
+      for (size_t i = 0; i < str.size(); ++i) {
+        if (str[i] == ',') {
+          str = str.substr(i + 1);
+          break;
+        } else if (str[i] == ']') {
+          return array;
+        }
+      }
+    }
   }
   throw "invalid value, type error";
 }
@@ -206,8 +232,9 @@ std::pair<string, nu::JsonTypes> parse_var(string str) {
   size_t i = 0;
   for (; str[i] != '"'; ++i) varName += str[i];
   for (; str[i] != ':' && str[i]; ++i);
-  for (; !isVar(str[i]) && str[i] && str.substr(i, 4) != "null"; ++i);
-  return std::pair(varName, to_type(str.substr(i)));
+  //for (; !isVar(str[i]) && str[i] && str.substr(i, 4) != "null"; ++i);
+  while (str[i] == ' ') ++i;
+  return std::pair(varName, to_type(str.substr(i + 1)));
 }
 
 /*-----------------------------------------------*/
@@ -215,6 +242,7 @@ std::pair<string, nu::JsonTypes> parse_var(string str) {
 namespace nu {
 
 Json::Json(string str) : m_jsn(str) {}
+Json::Json(char* str) : m_jsn(str) {}
 
 Json& Json::parse(string str) {
   auto var_line = cut_var(str);
