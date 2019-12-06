@@ -86,15 +86,12 @@ protected:
     if constexpr (is_JsonArray<T>) {
       return [=](JsonTypes elem) {
         auto array = std::get<JsonArray>(elem);
-
-        std::cout << "gen_assign/JsonArray: " << array.list.size() << '\n';
-
         for (auto& e : array.list) {
-          if (assign_if<int>(val, e)) return;
-          if (assign_if<float>(val, e)) return;
-          if (assign_if<char>(val, e)) return;
-          if (assign_if<string>(val, e)) return;
-          if (assign_if<bool>(val, e)) return;
+          if (assign_if<int>(val, e)) continue;
+          if (assign_if<float>(val, e)) continue;
+          if (assign_if<char>(val, e)) continue;
+          if (assign_if<string>(val, e)) continue;
+          if (assign_if<bool>(val, e)) continue;
           void* ptr = std::get_if<Json>(&e);
           if (ptr) {
             std::cout << "figure it out\n";
