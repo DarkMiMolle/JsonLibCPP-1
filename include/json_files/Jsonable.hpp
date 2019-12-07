@@ -15,6 +15,8 @@ using string = std::string;
 #define JsnVar(type, var) set[#var] = assign_gen<type>(&var);\
 val_to_string[#var] = [&](void) { return to_string<type>(var); }
 
+#define ListJsnVar void JsonInit()
+
 
 template <typename T>
 constexpr bool is_JsonArray = std::is_base_of_v<std::vector<int>, T>
@@ -62,6 +64,10 @@ protected:
   template <typename U, typename T>
   bool assign_if(T* val, JsonTypes& e) {
     if constexpr (std::is_base_of_v<std::vector<U>, T>) {
+      if constexpr (std::is_base_of_v<Jsonable, U>) {
+        val->emplace_back();
+        val->back().load(std::get<Json>(e)); // not working
+      }
       val->push_back(std::get<U>(e));
       return true;
     }
