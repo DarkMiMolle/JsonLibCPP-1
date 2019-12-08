@@ -16,20 +16,20 @@ class Json;
 
 
 using JsonNull = void*;
-using JsonObj = Json;
 template <typename T>
 using JArray = nu::Vector<T>;
 //using JsonArray = std::variant<JArray<int>, JArray<string>, JArray<float>, JArray<bool>, JArray<JsonObj>, JArray<JsonNull>>;
 #define JsonBasicTypes bool, float, int, std::string, char, JsonNull
 struct JsonArray {
-  nu::Vector<std::variant<JsonBasicTypes, Json, JsonArray>> list;
+  nu::Vector<std::variant<JsonBasicTypes, Json, nu::JsonArray>> list;
 };
 
-using JsonTypes = std::variant<JsonBasicTypes, JsonObj, JsonArray>;
+using JsonTypes = std::variant<JsonBasicTypes, Json, JsonArray>;
 #undef JsonBasicTypes
 
 class Json {
   friend class Jsonable;
+  friend class JsonObj;
 private:
   std::map<string, JsonTypes> m_map;
   string m_jsn;

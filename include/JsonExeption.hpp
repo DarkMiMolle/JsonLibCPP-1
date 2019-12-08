@@ -11,6 +11,7 @@ private:
   std::string msg;
 public:
   JsonError(std::string msg);
+  JsonError(const char* msg);
   virtual const char* what() const noexcept override;
 };
 

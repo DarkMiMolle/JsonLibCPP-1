@@ -12,6 +12,8 @@ const char* JsonError::what() const noexcept {
   return msg.c_str();
 }
 
+JsonError::JsonError(const char* msg) : msg(msg) {}
+
 
 TypeError::TypeError(): JsonError("unknown type.\n") {}
 TypeError::TypeError(string type): JsonError("invalide type: ITLC" + type + "NRM for a Json.\n") {}
