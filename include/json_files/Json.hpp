@@ -8,7 +8,9 @@
 #include <string>
 #include <variant>
 
-class JsonObj;
+namespace jsn_parse {
+  class JsonObj;
+}
 
 namespace nu {
 
@@ -31,7 +33,7 @@ using JsonTypes = std::variant<JsonBasicTypes, Json, JsonArray>;
 
 class Json {
   friend class Jsonable;
-  friend class ::JsonObj;
+  friend class jsn_parse::JsonObj;
 private:
   std::map<string, JsonTypes> m_map;
   string m_jsn;

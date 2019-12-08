@@ -20,22 +20,3 @@ const T& Val::get() const {
     throw;
   }
 }
-
-/*template <>
-const JsonArray& Val::get<JsonArray>() const {
-  try {
-    return std::get<Ref<JsonArray>>(m_val).get();
-  } catch (nu::JsonError& e) {
-    throw;
-  }
-}
-
-template <>
-const JsonObj& Val::get<JsonObj>() const {
-  try {
-    return std::get<Ref<JsonObj>>(m_val).get();
-  } catch (nu::JsonError& e) {
-    throw;
-  }
-}*/
-

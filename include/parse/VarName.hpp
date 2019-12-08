@@ -2,6 +2,8 @@
 
 #include <string>
 
+namespace jsn_parse {
+
 class VarName {
   using string = std::string;
 public:
@@ -16,3 +18,6 @@ private:
   string m_name;
 };
 
+
+
+}

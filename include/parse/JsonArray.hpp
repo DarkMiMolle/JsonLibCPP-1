@@ -5,6 +5,9 @@
 #include "JsnList.hpp"
 #include "../NuVector.hpp"
 
+namespace jsn_parse {
+
+
 class JsonArray : public Convertible_to<nu::JsonArray> {
   using string = std::string;
 public:
@@ -20,4 +23,6 @@ private:
   JsnList<Val> m_list;
   const bool is_null;
 };
+
+}
 

@@ -4,6 +4,9 @@
 #include "VarName.hpp"
 #include "Val.hpp"
 
+namespace jsn_parse {
+
+
 class Var {
   using string = std::string;
 public:
@@ -19,3 +22,6 @@ private:
   const bool m_valide;
 };
 
+
+
+}

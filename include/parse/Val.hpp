@@ -7,6 +7,8 @@
 #include "Convertible_to.hpp"
 #include "../json_files/Json.hpp"
 
+namespace jsn_parse {
+
 class JsonObj;
 class JsonArray;
 
@@ -49,3 +51,5 @@ private:
 };
 
 #include "Val.hxx"
+
+}

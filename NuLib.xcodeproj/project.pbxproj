@@ -8,56 +8,55 @@
 
 /* Begin PBXBuildFile section */
 		5C2B35B22390039B00DBADEB /* NuVector.hxx in Sources */ = {isa = PBXBuildFile; fileRef = 5C2B35B02390039B00DBADEB /* NuVector.hxx */; };
-		5CF2163323918B1000F7C092 /* Jsonable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2163123918B1000F7C092 /* Jsonable.cpp */; };
-		5CF2163723918C1200F7C092 /* Json.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2163523918C1200F7C092 /* Json.cpp */; };
-		5CF216442394283200F7C092 /* JsonExeption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF216432394283200F7C092 /* JsonExeption.cpp */; };
 		5CF2164E239428A200F7C092 /* Json.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF21648239428A200F7C092 /* Json.hpp */; };
 		5CF2164F239428A200F7C092 /* JsonExeption.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF21649239428A200F7C092 /* JsonExeption.hpp */; };
 		5CF21650239428A200F7C092 /* NuVector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF2164A239428A200F7C092 /* NuVector.hpp */; };
 		5CF21651239428A200F7C092 /* Json.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF2164C239428A200F7C092 /* Json.hpp */; };
 		5CF21652239428A200F7C092 /* Jsonable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF2164D239428A200F7C092 /* Jsonable.hpp */; };
-		5CF21656239B9E4E00F7C092 /* VarName.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF21654239B9E4E00F7C092 /* VarName.cpp */; };
 		5CF21657239B9E4E00F7C092 /* VarName.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF21655239B9E4E00F7C092 /* VarName.hpp */; };
-		5CF2165A239BA1B000F7C092 /* Val.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF21658239BA1B000F7C092 /* Val.cpp */; };
 		5CF2165B239BA1B000F7C092 /* Val.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF21659239BA1B000F7C092 /* Val.hpp */; };
-		5CF2165E239BA37500F7C092 /* JsnList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2165C239BA37500F7C092 /* JsnList.cpp */; };
 		5CF2165F239BA37500F7C092 /* JsnList.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF2165D239BA37500F7C092 /* JsnList.hpp */; };
-		5CF21662239BA3E700F7C092 /* Var.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF21660239BA3E700F7C092 /* Var.cpp */; };
 		5CF21663239BA3E700F7C092 /* Var.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF21661239BA3E700F7C092 /* Var.hpp */; };
-		5CF21666239BA5BB00F7C092 /* JsonObj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF21664239BA5BB00F7C092 /* JsonObj.cpp */; };
 		5CF21667239BA5BB00F7C092 /* JsonObj.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF21665239BA5BB00F7C092 /* JsonObj.hpp */; };
-		5CF2166A239BA68500F7C092 /* JsonArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF21668239BA68500F7C092 /* JsonArray.cpp */; };
 		5CF2166B239BA68500F7C092 /* JsonArray.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF21669239BA68500F7C092 /* JsonArray.hpp */; };
 		5CF2167B239D333100F7C092 /* Convertible_to.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CF21679239D333100F7C092 /* Convertible_to.hpp */; };
+		5CF21687239D4E8300F7C092 /* Val.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2167E239D4E8300F7C092 /* Val.cpp */; };
+		5CF21688239D4E8300F7C092 /* JsonObj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF2167F239D4E8300F7C092 /* JsonObj.cpp */; };
+		5CF21689239D4E8300F7C092 /* Var.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF21680239D4E8300F7C092 /* Var.cpp */; };
+		5CF2168A239D4E8300F7C092 /* JsonArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF21681239D4E8300F7C092 /* JsonArray.cpp */; };
+		5CF2168B239D4E8300F7C092 /* VarName.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF21682239D4E8300F7C092 /* VarName.cpp */; };
+		5CF2168C239D4E8300F7C092 /* Json.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF21683239D4E8300F7C092 /* Json.cpp */; };
+		5CF2168D239D4E8300F7C092 /* JsonExeption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF21684239D4E8300F7C092 /* JsonExeption.cpp */; };
+		5CF2168E239D4E8300F7C092 /* Jsonable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CF21685239D4E8300F7C092 /* Jsonable.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5C2B359E238FF84900DBADEB /* libNuLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNuLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2B35B02390039B00DBADEB /* NuVector.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NuVector.hxx; sourceTree = "<group>"; };
-		5CF2163123918B1000F7C092 /* Jsonable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Jsonable.cpp; sourceTree = SOURCE_ROOT; };
-		5CF2163523918C1200F7C092 /* Json.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Json.cpp; sourceTree = SOURCE_ROOT; };
-		5CF216432394283200F7C092 /* JsonExeption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JsonExeption.cpp; sourceTree = "<group>"; };
 		5CF21648239428A200F7C092 /* Json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Json.hpp; sourceTree = "<group>"; };
 		5CF21649239428A200F7C092 /* JsonExeption.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = JsonExeption.hpp; sourceTree = "<group>"; };
 		5CF2164A239428A200F7C092 /* NuVector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NuVector.hpp; sourceTree = "<group>"; };
 		5CF2164C239428A200F7C092 /* Json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Json.hpp; sourceTree = "<group>"; };
 		5CF2164D239428A200F7C092 /* Jsonable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Jsonable.hpp; sourceTree = "<group>"; };
 		5CF2165323943EDF00F7C092 /* ToDo */ = {isa = PBXFileReference; lastKnownFileType = text; path = ToDo; sourceTree = "<group>"; };
-		5CF21654239B9E4E00F7C092 /* VarName.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VarName.cpp; sourceTree = "<group>"; };
 		5CF21655239B9E4E00F7C092 /* VarName.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VarName.hpp; sourceTree = "<group>"; };
-		5CF21658239BA1B000F7C092 /* Val.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Val.cpp; sourceTree = "<group>"; };
 		5CF21659239BA1B000F7C092 /* Val.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Val.hpp; sourceTree = "<group>"; };
-		5CF2165C239BA37500F7C092 /* JsnList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = JsnList.cpp; sourceTree = "<group>"; };
 		5CF2165D239BA37500F7C092 /* JsnList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = JsnList.hpp; sourceTree = "<group>"; };
-		5CF21660239BA3E700F7C092 /* Var.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Var.cpp; sourceTree = "<group>"; };
 		5CF21661239BA3E700F7C092 /* Var.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Var.hpp; sourceTree = "<group>"; };
-		5CF21664239BA5BB00F7C092 /* JsonObj.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = JsonObj.cpp; sourceTree = "<group>"; };
 		5CF21665239BA5BB00F7C092 /* JsonObj.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = JsonObj.hpp; sourceTree = "<group>"; };
-		5CF21668239BA68500F7C092 /* JsonArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = JsonArray.cpp; sourceTree = "<group>"; };
 		5CF21669239BA68500F7C092 /* JsonArray.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = JsonArray.hpp; sourceTree = "<group>"; };
 		5CF21670239BE81900F7C092 /* Val.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Val.hxx; sourceTree = "<group>"; };
 		5CF21679239D333100F7C092 /* Convertible_to.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Convertible_to.hpp; sourceTree = "<group>"; };
 		5CF2167C239D3F5400F7C092 /* Jsonable.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Jsonable.hxx; sourceTree = "<group>"; };
+		5CF2167E239D4E8300F7C092 /* Val.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Val.cpp; sourceTree = "<group>"; };
+		5CF2167F239D4E8300F7C092 /* JsonObj.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JsonObj.cpp; sourceTree = "<group>"; };
+		5CF21680239D4E8300F7C092 /* Var.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Var.cpp; sourceTree = "<group>"; };
+		5CF21681239D4E8300F7C092 /* JsonArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JsonArray.cpp; sourceTree = "<group>"; };
+		5CF21682239D4E8300F7C092 /* VarName.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VarName.cpp; sourceTree = "<group>"; };
+		5CF21683239D4E8300F7C092 /* Json.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Json.cpp; sourceTree = "<group>"; };
+		5CF21684239D4E8300F7C092 /* JsonExeption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JsonExeption.cpp; sourceTree = "<group>"; };
+		5CF21685239D4E8300F7C092 /* Jsonable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Jsonable.cpp; sourceTree = "<group>"; };
+		5CF21690239D4FFC00F7C092 /* JsnList.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = JsnList.hxx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,18 +73,9 @@
 		5C2B3595238FF84900DBADEB = {
 			isa = PBXGroup;
 			children = (
-				5CF21660239BA3E700F7C092 /* Var.cpp */,
-				5CF21654239B9E4E00F7C092 /* VarName.cpp */,
-				5CF21658239BA1B000F7C092 /* Val.cpp */,
-				5CF2165C239BA37500F7C092 /* JsnList.cpp */,
-				5CF21664239BA5BB00F7C092 /* JsonObj.cpp */,
-				5CF21668239BA68500F7C092 /* JsonArray.cpp */,
 				5CF2165323943EDF00F7C092 /* ToDo */,
+				5CF2167D239D4E8300F7C092 /* src */,
 				5CF21647239428A200F7C092 /* include */,
-				5CF216432394283200F7C092 /* JsonExeption.cpp */,
-				5C2B35B02390039B00DBADEB /* NuVector.hxx */,
-				5CF2163523918C1200F7C092 /* Json.cpp */,
-				5CF2163123918B1000F7C092 /* Jsonable.cpp */,
 				5C2B359F238FF84900DBADEB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +95,7 @@
 				5CF21648239428A200F7C092 /* Json.hpp */,
 				5CF21649239428A200F7C092 /* JsonExeption.hpp */,
 				5CF2164A239428A200F7C092 /* NuVector.hpp */,
+				5C2B35B02390039B00DBADEB /* NuVector.hxx */,
 				5CF2164B239428A200F7C092 /* json_files */,
 			);
 			path = include;
@@ -128,11 +119,27 @@
 				5CF21670239BE81900F7C092 /* Val.hxx */,
 				5CF21659239BA1B000F7C092 /* Val.hpp */,
 				5CF2165D239BA37500F7C092 /* JsnList.hpp */,
+				5CF21690239D4FFC00F7C092 /* JsnList.hxx */,
 				5CF21665239BA5BB00F7C092 /* JsonObj.hpp */,
 				5CF21669239BA68500F7C092 /* JsonArray.hpp */,
 				5CF21679239D333100F7C092 /* Convertible_to.hpp */,
 			);
 			path = parse;
+			sourceTree = "<group>";
+		};
+		5CF2167D239D4E8300F7C092 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5CF2167E239D4E8300F7C092 /* Val.cpp */,
+				5CF2167F239D4E8300F7C092 /* JsonObj.cpp */,
+				5CF21680239D4E8300F7C092 /* Var.cpp */,
+				5CF21681239D4E8300F7C092 /* JsonArray.cpp */,
+				5CF21682239D4E8300F7C092 /* VarName.cpp */,
+				5CF21683239D4E8300F7C092 /* Json.cpp */,
+				5CF21684239D4E8300F7C092 /* JsonExeption.cpp */,
+				5CF21685239D4E8300F7C092 /* Jsonable.cpp */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,16 +221,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CF21666239BA5BB00F7C092 /* JsonObj.cpp in Sources */,
-				5CF2165E239BA37500F7C092 /* JsnList.cpp in Sources */,
-				5CF21662239BA3E700F7C092 /* Var.cpp in Sources */,
+				5CF21687239D4E8300F7C092 /* Val.cpp in Sources */,
+				5CF21688239D4E8300F7C092 /* JsonObj.cpp in Sources */,
 				5C2B35B22390039B00DBADEB /* NuVector.hxx in Sources */,
-				5CF216442394283200F7C092 /* JsonExeption.cpp in Sources */,
-				5CF21656239B9E4E00F7C092 /* VarName.cpp in Sources */,
-				5CF2165A239BA1B000F7C092 /* Val.cpp in Sources */,
-				5CF2166A239BA68500F7C092 /* JsonArray.cpp in Sources */,
-				5CF2163323918B1000F7C092 /* Jsonable.cpp in Sources */,
-				5CF2163723918C1200F7C092 /* Json.cpp in Sources */,
+				5CF2168E239D4E8300F7C092 /* Jsonable.cpp in Sources */,
+				5CF2168C239D4E8300F7C092 /* Json.cpp in Sources */,
+				5CF2168D239D4E8300F7C092 /* JsonExeption.cpp in Sources */,
+				5CF2168A239D4E8300F7C092 /* JsonArray.cpp in Sources */,
+				5CF21689239D4E8300F7C092 /* Var.cpp in Sources */,
+				5CF2168B239D4E8300F7C092 /* VarName.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
