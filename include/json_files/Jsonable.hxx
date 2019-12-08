@@ -1,4 +1,3 @@
-
 template <typename T>
 string Jsonable::to_string(T& val) {
   if constexpr (std::is_base_of_v<Jsonable, T>) {
@@ -9,6 +8,10 @@ string Jsonable::to_string(T& val) {
   }
   if constexpr (std::is_same_v<T, char>) {
     return string() + "\"" + val + "\"";
+  }
+  if constexpr (std::is_same_v<T, bool>) {
+    if (val) return "true";
+    return "false";
   }
   if constexpr (std::is_arithmetic_v<T>) {
     return std::to_string(val);
@@ -24,6 +27,20 @@ string Jsonable::to_string(T& val) {
   }
   throw val;
 }
+
+inline bool is_JsonNull(JsonTypes& j) {
+  return std::get_if<JsonNull>(&j) != nullptr;
+}
+
+template <typename T>
+inline bool assign_if_JsonNull(T* val, JsonTypes& j) {
+  if (is_JsonNull(j)) {
+    *val = T();
+    return true;
+  }
+  return false;
+}
+
 
 template <typename U, typename T>
 bool Jsonable::assign_if(T* val, JsonTypes& e) {

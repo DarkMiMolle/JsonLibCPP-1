@@ -48,18 +48,4 @@ public:
   //void print_map() const;
 };
 
-
-inline bool is_JsonNull(JsonTypes& j) {
-  return std::get_if<JsonNull>(&j) != nullptr;
-}
-
-template <typename T>
-inline bool assign_if_JsonNull(T* val, JsonTypes& j) {
-  if (is_JsonNull(j)) {
-    *val = T();
-    return true;
-  }
-  return false;
-}
-
 }
