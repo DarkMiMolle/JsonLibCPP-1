@@ -6,6 +6,7 @@
 
 #include "Convertible_to.hpp"
 #include "../json_files/Json.hpp"
+#include "../JsonExeption.hpp"
 
 namespace jsn_parse {
 
@@ -50,6 +51,6 @@ private:
   ParseJsonTypes m_val;
 };
 
-#include "Val.hxx"
+#include "implem/Val.hxx"
 
 }

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "JsonExeption.hpp"
-#include "NuVector.hpp"
+#include "../Collection.hpp"
 
 #include <variant>
 #include <map>

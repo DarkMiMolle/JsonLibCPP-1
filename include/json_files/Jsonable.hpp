@@ -53,7 +53,7 @@ public:
 
 };
 
-#include "Jsonable.hxx"
+#include "implem/Jsonable.hxx"
 
 }
 

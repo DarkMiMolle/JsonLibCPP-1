@@ -3,7 +3,7 @@
 #include "../Json.hpp"
 #include "Val.hpp"
 #include "JsnList.hpp"
-#include "../NuVector.hpp"
+#include "../Collection.hpp"
 
 namespace jsn_parse {
 

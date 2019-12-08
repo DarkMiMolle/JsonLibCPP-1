@@ -19,12 +19,12 @@ ListJsnVar {
   JsnVar(types, varName);
 }
 ```
-anywhere in your class and add: ```JsonInit();``` to your class constructors.
+anywhere in your class and add: `JsonInit();` to your class constructors.
 
-After that you can use the method ```load(string|char*|Json)``` to load the Json string to your object.
-Use the method ```stringify()``` to get your object as a Json string.
+After that you can use the method `load(string|char*|Json)` to load the Json string to your object.
+Use the method `stringify()` to get your object as a Json string.
 
-The Json class is a class that make sure that the given string is a valide Json string and allow to access data with the operator[] and the external template function ```std::get<T>(vatiant)``` or ```std::get_if<T>(&variant)``` which are the std::get/get_if for variant.
+The Json class is a class that make sure that the given string is a valide Json string and allow to access data with the operator[] and the external template function `std::get<T>(vatiant)` or `std::get_if<T>(&variant)` which are the std::get/get_if for variant.
 
 ### exemple:
 ```c++

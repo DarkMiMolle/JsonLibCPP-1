@@ -57,6 +57,8 @@
 		5CF21684239D4E8300F7C092 /* JsonExeption.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JsonExeption.cpp; sourceTree = "<group>"; };
 		5CF21685239D4E8300F7C092 /* Jsonable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Jsonable.cpp; sourceTree = "<group>"; };
 		5CF21690239D4FFC00F7C092 /* JsnList.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = JsnList.hxx; sourceTree = "<group>"; };
+		5CF21691239D51E800F7C092 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5CF21697239D54AC00F7C092 /* Collection.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Collection.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		5C2B3595238FF84900DBADEB = {
 			isa = PBXGroup;
 			children = (
+				5CF21691239D51E800F7C092 /* README.md */,
 				5CF2165323943EDF00F7C092 /* ToDo */,
 				5CF2167D239D4E8300F7C092 /* src */,
 				5CF21647239428A200F7C092 /* include */,
@@ -91,11 +94,11 @@
 		5CF21647239428A200F7C092 /* include */ = {
 			isa = PBXGroup;
 			children = (
+				5CF21695239D545300F7C092 /* misc */,
 				5CF21673239C69F600F7C092 /* parse */,
 				5CF21648239428A200F7C092 /* Json.hpp */,
+				5CF21697239D54AC00F7C092 /* Collection.hpp */,
 				5CF21649239428A200F7C092 /* JsonExeption.hpp */,
-				5CF2164A239428A200F7C092 /* NuVector.hpp */,
-				5C2B35B02390039B00DBADEB /* NuVector.hxx */,
 				5CF2164B239428A200F7C092 /* json_files */,
 			);
 			path = include;
@@ -104,9 +107,9 @@
 		5CF2164B239428A200F7C092 /* json_files */ = {
 			isa = PBXGroup;
 			children = (
+				5CF21694239D541B00F7C092 /* implem */,
 				5CF2164C239428A200F7C092 /* Json.hpp */,
 				5CF2164D239428A200F7C092 /* Jsonable.hpp */,
-				5CF2167C239D3F5400F7C092 /* Jsonable.hxx */,
 			);
 			path = json_files;
 			sourceTree = "<group>";
@@ -114,12 +117,11 @@
 		5CF21673239C69F600F7C092 /* parse */ = {
 			isa = PBXGroup;
 			children = (
+				5CF21693239D53B700F7C092 /* implem */,
 				5CF21661239BA3E700F7C092 /* Var.hpp */,
 				5CF21655239B9E4E00F7C092 /* VarName.hpp */,
-				5CF21670239BE81900F7C092 /* Val.hxx */,
 				5CF21659239BA1B000F7C092 /* Val.hpp */,
 				5CF2165D239BA37500F7C092 /* JsnList.hpp */,
-				5CF21690239D4FFC00F7C092 /* JsnList.hxx */,
 				5CF21665239BA5BB00F7C092 /* JsonObj.hpp */,
 				5CF21669239BA68500F7C092 /* JsonArray.hpp */,
 				5CF21679239D333100F7C092 /* Convertible_to.hpp */,
@@ -140,6 +142,40 @@
 				5CF21685239D4E8300F7C092 /* Jsonable.cpp */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		5CF21693239D53B700F7C092 /* implem */ = {
+			isa = PBXGroup;
+			children = (
+				5CF21670239BE81900F7C092 /* Val.hxx */,
+				5CF21690239D4FFC00F7C092 /* JsnList.hxx */,
+			);
+			path = implem;
+			sourceTree = "<group>";
+		};
+		5CF21694239D541B00F7C092 /* implem */ = {
+			isa = PBXGroup;
+			children = (
+				5CF2167C239D3F5400F7C092 /* Jsonable.hxx */,
+			);
+			path = implem;
+			sourceTree = "<group>";
+		};
+		5CF21695239D545300F7C092 /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				5CF21696239D546300F7C092 /* implem */,
+				5CF2164A239428A200F7C092 /* NuVector.hpp */,
+			);
+			path = misc;
+			sourceTree = "<group>";
+		};
+		5CF21696239D546300F7C092 /* implem */ = {
+			isa = PBXGroup;
+			children = (
+				5C2B35B02390039B00DBADEB /* NuVector.hxx */,
+			);
+			path = implem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

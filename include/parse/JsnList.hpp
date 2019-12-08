@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Var.hpp"
-#include "../NuVector.hpp"
+#include "../Collection.hpp"
 
 #include <iostream>
 
@@ -21,6 +21,6 @@ private:
   nu::Vector<T> m_list;
 };
 
-#include "JsnList.hxx"
+#include "implem/JsnList.hxx"
 
 }

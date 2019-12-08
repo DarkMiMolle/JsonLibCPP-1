@@ -1,5 +1,5 @@
 #include "../include/json_files/Json.hpp"
-#include "../include/NuVector.hpp"
+#include "../include/Collection.hpp"
 
 #include "../include/JsonExeption.hpp"
 #include "../include/parse/JsonObj.hpp"
