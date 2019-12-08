@@ -31,5 +31,9 @@ void JsonArray::print() const {
 
 
 JsonArray::TypeDest JsonArray::convert() const {
-  return TypeDest();
+  TypeDest array;
+  for (auto& val : m_list.list()) {
+    array.list.push_back(val.convert());
+  }
+  return array;
 }

@@ -57,6 +57,7 @@
 		5CF21669239BA68500F7C092 /* JsonArray.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = JsonArray.hpp; sourceTree = "<group>"; };
 		5CF21670239BE81900F7C092 /* Val.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Val.hxx; sourceTree = "<group>"; };
 		5CF21679239D333100F7C092 /* Convertible_to.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Convertible_to.hpp; sourceTree = "<group>"; };
+		5CF2167C239D3F5400F7C092 /* Jsonable.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Jsonable.hxx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +115,7 @@
 			children = (
 				5CF2164C239428A200F7C092 /* Json.hpp */,
 				5CF2164D239428A200F7C092 /* Jsonable.hpp */,
+				5CF2167C239D3F5400F7C092 /* Jsonable.hxx */,
 			);
 			path = json_files;
 			sourceTree = "<group>";

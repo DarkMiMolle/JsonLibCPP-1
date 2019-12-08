@@ -40,5 +40,10 @@ void JsonObj::print() const {
 }
 
 nu::Json JsonObj::convert() const {
-  return nu::Json();
+  using Json = nu::Json;
+  Json j;
+  for (auto& var : m_list.list()) {
+    j.m_map[var.var_name().name()] = var.val().convert();
+  }
+  return j;
 }

@@ -112,5 +112,12 @@ void Val::print() const {
 }
 
 nu::JsonTypes Val::convert() const {
-  return nullptr;
+  TypeDest to;
+  auto* ptr_to = &to;
+  visit(overloaded {
+    [=](auto arg) { *ptr_to = arg; },
+    [=](Ref<JsonArray> arg) { *ptr_to = arg.get().convert(); },
+    [=](Ref<JsonObj> arg) { *ptr_to = arg.get().convert(); }
+  }, m_val);
+  return to;
 }

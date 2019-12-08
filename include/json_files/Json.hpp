@@ -8,6 +8,8 @@
 #include <string>
 #include <variant>
 
+class JsonObj;
+
 namespace nu {
 
 using string = std::string;
@@ -18,7 +20,7 @@ class Json;
 using JsonNull = void*;
 template <typename T>
 using JArray = nu::Vector<T>;
-//using JsonArray = std::variant<JArray<int>, JArray<string>, JArray<float>, JArray<bool>, JArray<JsonObj>, JArray<JsonNull>>;
+
 #define JsonBasicTypes bool, float, int, std::string, char, JsonNull
 struct JsonArray {
   nu::Vector<std::variant<JsonBasicTypes, Json, nu::JsonArray>> list;
@@ -29,7 +31,7 @@ using JsonTypes = std::variant<JsonBasicTypes, Json, JsonArray>;
 
 class Json {
   friend class Jsonable;
-  friend class JsonObj;
+  friend class ::JsonObj;
 private:
   std::map<string, JsonTypes> m_map;
   string m_jsn;
@@ -43,7 +45,7 @@ public:
 
   string getString() const;
 
-  void print_map() const;
+  //void print_map() const;
 };
 
 
