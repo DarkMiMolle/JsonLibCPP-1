@@ -2,6 +2,10 @@
 NuCpp is a C++ lib use to add some features I want to see.
 ---
 
+the lib is located in `build/Debug` and you need the included file in `include/`.
+
+---
+
 ## Json
 
 With NuCpp comes a Json part.
