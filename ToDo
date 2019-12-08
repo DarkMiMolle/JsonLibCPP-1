@@ -1,9 +1,4 @@
 ToDo:
 
-* handle arrays
-* handle null (null != nullptr), there is no ptr in Json
-null will only be 0 set to all JsonBasicTypes
-* add throw TypeError in assign_gen function when the type is not compatible
-* create a template function which may throw TypeError for Json with only a JsonBasicType value.
-
-* put the templated function into a .hxx
+* operator[string] -> JsonTypes in Json that would allow to use correct Json object if we don't have the C++ correponding class.
+* being able to handle array of JsonTypes in Jsonable (the point is that today it can be only an array of only one type)
