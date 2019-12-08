@@ -94,7 +94,7 @@
 		5CF21647239428A200F7C092 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				5CF21695239D545300F7C092 /* misc */,
+				5CF21695239D545300F7C092 /* Collections */,
 				5CF21673239C69F600F7C092 /* parse */,
 				5CF21648239428A200F7C092 /* Json.hpp */,
 				5CF21697239D54AC00F7C092 /* Collection.hpp */,
@@ -161,13 +161,13 @@
 			path = implem;
 			sourceTree = "<group>";
 		};
-		5CF21695239D545300F7C092 /* misc */ = {
+		5CF21695239D545300F7C092 /* Collections */ = {
 			isa = PBXGroup;
 			children = (
 				5CF21696239D546300F7C092 /* implem */,
 				5CF2164A239428A200F7C092 /* NuVector.hpp */,
 			);
-			path = misc;
+			path = Collections;
 			sourceTree = "<group>";
 		};
 		5CF21696239D546300F7C092 /* implem */ = {
